@@ -28,12 +28,12 @@ body {
     line-height: 1.6;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -46,6 +46,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -61,7 +62,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,12 +80,16 @@ nav a:hover {
 
 .hero h2 {
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 750px;
 }
 
 .section {
     padding: 100px 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -97,16 +102,16 @@ nav a:hover {
 
 /* ABOUT */
 .about p {
-    text-align: center;
-    max-width: 750px;
+    max-width: 850px;
     margin: auto;
+    text-align: center;
     color: var(--gray);
 }
 
 /* SKILLS */
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -137,7 +142,7 @@ nav a:hover {
 /* TIMELINE */
 .timeline {
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 .timeline::before {
@@ -150,8 +155,8 @@ nav a:hover {
 }
 
 .timeline-item {
-    margin-bottom: 40px;
-    padding-left: 30px;
+    margin-bottom: 50px;
+    padding-left: 35px;
     position: relative;
 }
 
@@ -169,13 +174,13 @@ nav a:hover {
 /* PROJECTS */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .project-card {
     background: var(--card);
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s;
@@ -205,7 +210,7 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* ANIMATION */
+/* FADE ANIMATION */
 .fade {
     opacity: 0;
     transform: translateY(30px);
@@ -225,6 +230,7 @@ nav a:hover {
     nav ul {
         gap: 15px;
         font-size: 14px;
+        justify-content: center;
     }
 }
 </style>
@@ -233,107 +239,159 @@ nav a:hover {
 <body>
 
 <nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Project</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <section class="hero">
-    <h1>Krishna Mishra</h1>
-    <h2>Software Engineer II | Application Support Engineer</h2>
-    <p>IT professional with 2+ years of experience in technical support, production support, and application troubleshooting. Focused on stability, automation, and scalable support solutions.</p>
+<h1>Krishna Mishra</h1>
+<h2>Software Engineer II | Application Support / Application Analyst</h2>
+<p>
+Application Support professional with 2.5+ years of experience across L1/L2 technical support, 
+system analysis, stakeholder coordination, and production incident management. 
+Promoted internally for consistent performance, ownership, and operational impact. 
+Strong expertise in SQL-based issue validation, Root Cause Analysis (RCA), UAT support, 
+SLA monitoring, and documentation-driven process improvements.
+</p>
 </section>
 
 <section id="about" class="section about fade">
-    <h2>About Me</h2>
-    <p>
-        I am a Mumbai-based Software Engineer II with hands-on experience in application support, incident management, troubleshooting, and client coordination. 
-        I specialize in resolving production issues, improving system performance, and ensuring high availability of enterprise applications. 
-        My goal is to transition into higher-responsibility technical roles with strong growth and compensation opportunities.
-    </p>
+<h2>About Me</h2>
+<p>
+Mumbai-based IT professional currently working as Software Engineer II at Homeville Consulting Pvt Ltd. 
+I manage 20–30+ production incidents weekly, convert findings into structured defect documentation, 
+collaborate with Product, Engineering, QA, and Customer Support teams, and ensure release validation cycles run smoothly. 
+My focus lies in operational excellence, reducing repeat incidents, improving MTTR, and building structured knowledge systems that enhance long-term stability.
+</p>
 </section>
 
 <section id="skills" class="section fade">
-    <h2>Core Skills</h2>
-    <div class="skills-container">
-        <div class="skill">
-            <h4>Application Support</h4>
-            <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-        </div>
-        <div class="skill">
-            <h4>SQL & Database Troubleshooting</h4>
-            <div class="progress"><div class="progress-bar" data-width="80%"></div></div>
-        </div>
-        <div class="skill">
-            <h4>Incident & Problem Management</h4>
-            <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
-        </div>
-        <div class="skill">
-            <h4>Linux / Server Basics</h4>
-            <div class="progress"><div class="progress-bar" data-width="70%"></div></div>
-        </div>
-        <div class="skill">
-            <h4>Client Communication</h4>
-            <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
-        </div>
-    </div>
+<h2>Technical & Functional Skills</h2>
+<div class="skills-container">
+
+<div class="skill">
+<h4>Incident Management & RCA</h4>
+<div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+<h4>SQL (MySQL, MongoDB, HeidiSQL)</h4>
+<div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+</div>
+
+<div class="skill">
+<h4>Requirement Gathering & Risk Analysis</h4>
+<div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+</div>
+
+<div class="skill">
+<h4>Postman (API Validation)</h4>
+<div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+</div>
+
+<div class="skill">
+<h4>Apache Superset & Reporting</h4>
+<div class="progress"><div class="progress-bar" data-width="70%"></div></div>
+</div>
+
+<div class="skill">
+<h4>Documentation & SOP Creation</h4>
+<div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+</div>
+
+<div class="skill">
+<h4>Stakeholder Management</h4>
+<div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+</div>
+
+<div class="skill">
+<h4>MS Excel & Data Analysis</h4>
+<div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+</div>
+
+</div>
 </section>
 
 <section id="experience" class="section fade">
-    <h2>Work Experience</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Software Engineer II</h3>
-            <span>Current Organization | 2025 - Present</span>
-            <p>Handling application support, production issue resolution, log analysis, SQL queries, and stakeholder communication while ensuring SLA compliance.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Technical Support Engineer</h3>
-            <span>Previous Role | 2023 - 2025</span>
-            <p>Provided L1/L2 support, resolved tickets, monitored systems, performed root cause analysis, and supported client-facing technical operations.</p>
-        </div>
-    </div>
+<h2>Work Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Software Engineer II</h3>
+<span>Homeville Consulting Pvt Ltd | 2025 - Present</span>
+<p>
+• Primary application support and analysis contact for production issues.<br>
+• Analyze 20–30+ incidents weekly; convert findings into structured Jira defect documentation.<br>
+• Execute SQL queries to validate data discrepancies; reduced false-positive incidents by ~15–20%.<br>
+• Perform Root Cause Analysis (RCA) reducing repeat incidents by ~25% across release cycles.<br>
+• Support UAT validation cycles including test case preparation and release confirmation.<br>
+• Maintain SOPs, runbooks, and onboarding documentation reducing handover time by ~30%.<br>
+• Monitor SLA, MTTR, and ticket aging metrics for daily operational reviews.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Technical Support Engineer</h3>
+<span>Homeville Consulting Pvt Ltd | 2023 - 2025</span>
+<p>
+• Delivered L1/L2 application support ensuring SLA compliance for business-critical systems.<br>
+• Performed trend analysis converting recurring issues into structured enhancement requests.<br>
+• Authored RCA documents and collaborated with QA and Engineering for permanent fixes.<br>
+• Built Knowledge Base and Known-Error Database reducing repeat incidents.<br>
+• Introduced improved escalation workflow enhancing CSAT metrics.
+</p>
+</div>
+
+</div>
 </section>
 
 <section id="projects" class="section fade">
-    <h2>Projects</h2>
-    <div class="projects">
-        <div class="project-card">
-            <h3>Incident Resolution Optimization</h3>
-            <p>Improved ticket resolution workflow by creating structured troubleshooting steps and knowledge documentation.</p>
-        </div>
-        <div class="project-card">
-            <h3>SQL Performance Monitoring</h3>
-            <p>Executed database queries to identify performance bottlenecks and supported optimization efforts.</p>
-        </div>
-        <div class="project-card">
-            <h3>Automation Scripts</h3>
-            <p>Developed basic scripts to automate repetitive monitoring and reporting tasks.</p>
-        </div>
-    </div>
+<h2>Key Project</h2>
+<div class="projects">
+
+<div class="project-card">
+<h3>Integrated Support Optimization</h3>
+<p>
+Knowledge Management & Proactive Issue Resolution Initiative.<br><br>
+• Analyzed support ticket data using SQL to identify recurring trends.<br>
+• Automated repetitive support tasks improving efficiency by 20%.<br>
+• Conducted client follow-ups to ensure closure quality and process improvement.<br>
+• Supported operations for Homeville Group & Bharat Housing Network platforms.
+</p>
+</div>
+
+</div>
 </section>
 
 <section id="education" class="section fade">
-    <h2>Education</h2>
-    <div class="education-item">
-        <h3>Bachelor’s Degree</h3>
-        <span>University Name | Year of Graduation</span>
-        <p>Relevant focus on computer science, systems, and software fundamentals.</p>
-    </div>
+<h2>Education</h2>
+
+<div class="education-item">
+<h3>Master's in Computer Application</h3>
+<span>Thakur Institute of Management Studies Development & Research | 2023 | CGPA: 6.66</span>
+</div>
+
+<div class="education-item">
+<h3>Bachelor's in Information Technology</h3>
+<span>Thakur College of Science & Commerce | 2020 | CGPA: 6.72</span>
+</div>
+
 </section>
 
 <section id="contact" class="section contact fade">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mishrakrishna296@gmail.com">mishrakrishna296@gmail.com</a></p>
-    <p>
-        <a href="#">LinkedIn</a> |
-        <a href="#">GitHub</a>
-    </p>
+<h2>Contact</h2>
+<p>📞 9967635196</p>
+<p>Email: <a href="mailto:mishrakrishna296@gmail.com">mishrakrishna296@gmail.com</a></p>
+<p>
+<a href="https://www.linkedin.com/in/isitkrishnamishra" target="_blank">LinkedIn</a>
+</p>
 </section>
 
 <script>
@@ -341,25 +399,25 @@ const faders = document.querySelectorAll('.fade');
 const appearOptions = { threshold: 0.2 };
 
 const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-    });
+entries.forEach(entry => {
+if (!entry.isIntersecting) return;
+entry.target.classList.add('show');
+observer.unobserve(entry.target);
+});
 }, appearOptions);
 
 faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+appearOnScroll.observe(fader);
 });
 
 const progressBars = document.querySelectorAll('.progress-bar');
 window.addEventListener('scroll', () => {
-    progressBars.forEach(bar => {
-        const rect = bar.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 50) {
-            bar.style.width = bar.getAttribute('data-width');
-        }
-    });
+progressBars.forEach(bar => {
+const rect = bar.getBoundingClientRect();
+if(rect.top < window.innerHeight - 50) {
+bar.style.width = bar.getAttribute('data-width');
+}
+});
 });
 </script>
 
