@@ -7,11 +7,12 @@
 
 <style>
 :root {
-    --primary: #2563eb;
-    --dark: #0f172a;
-    --light: #f1f5f9;
-    --gray: #64748b;
+    --primary: #5a3e2b;      /* Rich brown */
+    --dark: #2b1e16;         /* Deep espresso */
+    --light: #f5f1eb;        /* Warm beige */
     --card: #ffffff;
+    --gray: #6b5b4d;
+    --gold: #b08d57;         /* Muted luxury gold */
 }
 
 * {
@@ -25,7 +26,7 @@
 body {
     background: var(--light);
     color: var(--dark);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* NAVIGATION */
@@ -33,19 +34,19 @@ nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(245,241,235,0.95);
+    backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     padding: 15px 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(43, 30, 22, 0.05);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -53,11 +54,12 @@ nav a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
+    letter-spacing: 0.5px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--primary);
+    color: var(--gold);
 }
 
 /* HERO */
@@ -69,24 +71,28 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(135deg, #2563eb, #1e3a8a);
-    color: white;
+    background: linear-gradient(135deg, #2b1e16, #5a3e2b);
+    color: var(--light);
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .hero h2 {
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #e8dccb;
 }
 
 .hero p {
-    max-width: 750px;
+    max-width: 800px;
+    font-size: 1.05rem;
 }
 
+/* SECTION */
 .section {
     padding: 100px 20px;
     max-width: 1100px;
@@ -95,9 +101,19 @@ nav a:hover {
 
 .section h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 2rem;
     color: var(--primary);
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    display: block;
+    margin: 10px auto 0;
 }
 
 /* ABOUT */
@@ -112,14 +128,14 @@ nav a:hover {
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .skill {
     background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(43, 30, 22, 0.08);
 }
 
 .skill h4 {
@@ -127,7 +143,7 @@ nav a:hover {
 }
 
 .progress {
-    background: #e2e8f0;
+    background: #e6ded6;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -142,13 +158,13 @@ nav a:hover {
 /* TIMELINE */
 .timeline {
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 10px;
+    left: 12px;
     width: 3px;
     height: 100%;
     background: var(--primary);
@@ -156,7 +172,7 @@ nav a:hover {
 
 .timeline-item {
     margin-bottom: 50px;
-    padding-left: 35px;
+    padding-left: 40px;
     position: relative;
 }
 
@@ -165,25 +181,25 @@ nav a:hover {
     position: absolute;
     left: 0;
     top: 5px;
-    width: 15px;
-    height: 15px;
-    background: var(--primary);
+    width: 16px;
+    height: 16px;
+    background: var(--gold);
     border-radius: 50%;
 }
 
 /* PROJECTS */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .project-card {
     background: var(--card);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(43, 30, 22, 0.08);
+    transition: 0.3s ease;
 }
 
 .project-card:hover {
@@ -193,10 +209,10 @@ nav a:hover {
 /* EDUCATION */
 .education-item {
     background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(43, 30, 22, 0.08);
 }
 
 /* CONTACT */
@@ -208,6 +224,10 @@ nav a:hover {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+}
+
+.contact a:hover {
+    color: var(--gold);
 }
 
 /* FADE ANIMATION */
@@ -254,20 +274,19 @@ nav a:hover {
 <h2>Software Engineer II | Application Support / Application Analyst</h2>
 <p>
 Application Support professional with 2.5+ years of experience across L1/L2 technical support, 
-system analysis, stakeholder coordination, and production incident management. 
-Promoted internally for consistent performance, ownership, and operational impact. 
-Strong expertise in SQL-based issue validation, Root Cause Analysis (RCA), UAT support, 
-SLA monitoring, and documentation-driven process improvements.
+system analysis, stakeholder coordination, and production incident management. Promoted internally 
+for consistent performance and operational ownership. Strong expertise in SQL-based issue validation, 
+Root Cause Analysis (RCA), UAT support, SLA monitoring, and documentation-led process optimization.
 </p>
 </section>
 
 <section id="about" class="section about fade">
 <h2>About Me</h2>
 <p>
-Mumbai-based IT professional currently working as Software Engineer II at Homeville Consulting Pvt Ltd. 
-I manage 20–30+ production incidents weekly, convert findings into structured defect documentation, 
-collaborate with Product, Engineering, QA, and Customer Support teams, and ensure release validation cycles run smoothly. 
-My focus lies in operational excellence, reducing repeat incidents, improving MTTR, and building structured knowledge systems that enhance long-term stability.
+Mumbai-based IT professional currently working at Homeville Consulting Pvt Ltd. 
+Managing 20–30+ production incidents weekly, collaborating cross-functionally with Product, Engineering, QA, 
+and Customer Support teams. Focused on operational excellence, reducing repeat incidents, improving MTTR, 
+and building structured knowledge systems that enhance long-term application stability.
 </p>
 </section>
 
@@ -320,7 +339,6 @@ My focus lies in operational excellence, reducing repeat incidents, improving MT
 
 <section id="experience" class="section fade">
 <h2>Work Experience</h2>
-
 <div class="timeline">
 
 <div class="timeline-item">
@@ -328,12 +346,12 @@ My focus lies in operational excellence, reducing repeat incidents, improving MT
 <span>Homeville Consulting Pvt Ltd | 2025 - Present</span>
 <p>
 • Primary application support and analysis contact for production issues.<br>
-• Analyze 20–30+ incidents weekly; convert findings into structured Jira defect documentation.<br>
-• Execute SQL queries to validate data discrepancies; reduced false-positive incidents by ~15–20%.<br>
-• Perform Root Cause Analysis (RCA) reducing repeat incidents by ~25% across release cycles.<br>
-• Support UAT validation cycles including test case preparation and release confirmation.<br>
-• Maintain SOPs, runbooks, and onboarding documentation reducing handover time by ~30%.<br>
-• Monitor SLA, MTTR, and ticket aging metrics for daily operational reviews.
+• Analyze 20–30+ incidents weekly and convert findings into structured Jira documentation.<br>
+• Execute SQL queries to validate discrepancies; reduced false-positive incidents by 15–20%.<br>
+• Conduct RCA reducing repeat incidents by 25% across release cycles.<br>
+• Support UAT validation cycles and release confirmations.<br>
+• Maintain SOPs/runbooks reducing onboarding time by 30%.<br>
+• Monitor SLA, MTTR, and ticket aging metrics for operational dashboards.
 </p>
 </div>
 
@@ -341,11 +359,11 @@ My focus lies in operational excellence, reducing repeat incidents, improving MT
 <h3>Technical Support Engineer</h3>
 <span>Homeville Consulting Pvt Ltd | 2023 - 2025</span>
 <p>
-• Delivered L1/L2 application support ensuring SLA compliance for business-critical systems.<br>
-• Performed trend analysis converting recurring issues into structured enhancement requests.<br>
-• Authored RCA documents and collaborated with QA and Engineering for permanent fixes.<br>
-• Built Knowledge Base and Known-Error Database reducing repeat incidents.<br>
-• Introduced improved escalation workflow enhancing CSAT metrics.
+• Delivered L1/L2 application support ensuring SLA compliance.<br>
+• Performed trend analysis converting recurring issues into enhancements.<br>
+• Authored RCA documentation with QA/Engineering collaboration.<br>
+• Built Known-Error Database reducing repeat incidents.<br>
+• Introduced improved escalation workflow enhancing CSAT.
 </p>
 </div>
 
@@ -361,9 +379,9 @@ My focus lies in operational excellence, reducing repeat incidents, improving MT
 <p>
 Knowledge Management & Proactive Issue Resolution Initiative.<br><br>
 • Analyzed support ticket data using SQL to identify recurring trends.<br>
-• Automated repetitive support tasks improving efficiency by 20%.<br>
-• Conducted client follow-ups to ensure closure quality and process improvement.<br>
-• Supported operations for Homeville Group & Bharat Housing Network platforms.
+• Automated repetitive support tasks improving team efficiency by 20%.<br>
+• Conducted client follow-ups to ensure issue closure quality.<br>
+• Supported operational platforms for Homeville Group & Bharat Housing Network.
 </p>
 </div>
 
