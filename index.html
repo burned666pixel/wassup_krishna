@@ -7,7 +7,7 @@
 
 <meta name="description" content="Krishna Mishra — Software Engineer II | Application Support | SQL | Incident Management | Portfolio & Resume">
 
-<!-- Google Analytics (Replace G-XXXXXXXXXX with your ID) -->
+<!-- Google Analytics (Replace with your ID if needed) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -26,7 +26,6 @@ gtag('config', 'G-XXXXXXXXXX');
     --gold: #b08d57;
 }
 
-/* Dark Mode Variables */
 body.dark-mode {
     --primary: #b08d57;
     --dark: #f5f1eb;
@@ -39,8 +38,8 @@ body.dark-mode {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -84,24 +83,24 @@ nav a:hover {
 
 .toggle-btn {
     position: absolute;
-    right: 30px;
+    right: 25px;
     cursor: pointer;
-    font-size: 14px;
     background: var(--primary);
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
+    font-size: 13px;
 }
 
 /* HERO */
 .hero {
     min-height: 100vh;
+    background: linear-gradient(135deg, #2b1e16, #5a3e2b);
+    color: var(--light);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #2b1e16, #5a3e2b);
-    color: var(--light);
     text-align: center;
     padding: 20px;
 }
@@ -113,18 +112,12 @@ nav a:hover {
     margin-top: 25px;
     background: var(--gold);
     color: #2b1e16;
-    padding: 12px 25px;
+    padding: 12px 28px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.cta-btn:hover {
-    background: #d4af37;
-}
-
-/* SECTION */
 .section {
     padding: 100px 20px;
     max-width: 1100px;
@@ -133,7 +126,7 @@ nav a:hover {
 
 .section h2 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: var(--primary);
 }
 
@@ -142,17 +135,20 @@ nav a:hover {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(43,30,22,0.08);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* TESTIMONIALS */
-.testimonial {
-    text-align: center;
-    font-style: italic;
-    color: var(--gray);
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
 }
 
-/* CONTACT */
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .contact {
     text-align: center;
 }
@@ -161,22 +157,6 @@ nav a:hover {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
-}
-
-.contact a:hover {
-    color: var(--gold);
-}
-
-/* FADE */
-.fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-}
-
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 @media(max-width:768px){
@@ -192,7 +172,8 @@ nav a:hover {
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
+<li><a href="#projects">Project</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#testimonials">Testimonials</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -201,48 +182,72 @@ nav a:hover {
 
 <section class="hero">
 <h1>Krishna Mishra</h1>
-<h2>Software Engineer II | Application Support Analyst</h2>
-<p>Driving production stability, reducing repeat incidents, and optimizing operational workflows using structured RCA and SQL validation.</p>
+<h2>Software Engineer II | Application Support / Application Analyst</h2>
+<p>
+Application Support professional with 2.5+ years of experience across L1/L2 technical support,
+system analysis, stakeholder coordination, and production incident management.
+</p>
 <a href="#contact" class="cta-btn">Hire Me</a>
 </section>
 
 <section id="about" class="section fade">
 <h2>About</h2>
 <div class="card">
-Mumbai-based Software Engineer II with 2.5+ years of L1/L2 application support experience. Managing 20–30+ weekly production incidents, improving MTTR, reducing repeat incidents by 25%, and enhancing process documentation efficiency by 30%.
+Promoted internally for consistent performance and ownership in managing production incidents.
+Strong in SQL-based issue validation, Root Cause Analysis (RCA), UAT support,
+SLA monitoring, and documentation-led operational improvements.
 </div>
 </section>
 
 <section id="experience" class="section fade">
 <h2>Experience</h2>
+
 <div class="card">
-<strong>Software Engineer II — Homeville Consulting Pvt Ltd (2025–Present)</strong><br>
-• SQL validation & data discrepancy checks<br>
+<strong>Software Engineer II — Homeville Consulting Pvt Ltd (2025–Present)</strong><br><br>
+• Act as primary application support point for production issues<br>
+• Analyze 20–30+ incidents weekly; convert into Jira defect documentation<br>
+• SQL validation reducing false positives by 15–20%<br>
 • RCA reducing repeat incidents by 25%<br>
-• UAT validation & SLA monitoring<br>
-• Jira defect documentation & stakeholder coordination
+• UAT testing & release validation<br>
+• Maintain SOPs reducing onboarding time by 30%<br>
+• Monitor SLA, MTTR & ticket aging dashboards
 </div>
 
 <div class="card">
-<strong>Technical Support Engineer — Homeville Consulting Pvt Ltd (2023–2025)</strong><br>
-• L1/L2 support & trend analysis<br>
-• Built Known Error Database<br>
-• Escalation workflow improvement
+<strong>Technical Support Engineer — Homeville Consulting Pvt Ltd (2023–2025)</strong><br><br>
+• L1/L2 application support ensuring SLA compliance<br>
+• Trend analysis converting issues into enhancement requests<br>
+• Authored RCA documentation with QA/Engineering<br>
+• Built Known-Error Database reducing repeat incidents<br>
+• Improved escalation workflow enhancing CSAT
 </div>
 </section>
 
 <section id="projects" class="section fade">
-<h2>Projects</h2>
+<h2>Project</h2>
 <div class="card">
-<strong>Integrated Support Optimization</strong><br>
-Improved support efficiency by 20% via SQL-driven ticket trend analysis and automation of repetitive tasks.
+<strong>Integrated Support Optimization — Knowledge Management & Proactive Resolution</strong><br><br>
+• SQL analysis of recurring ticket trends<br>
+• Automated repetitive support tasks improving efficiency by 20%<br>
+• Client follow-ups for resolution quality improvement<br>
+• Supported operational platforms for Homeville Group & Bharat Housing Network
+</div>
+</section>
+
+<section id="education" class="section fade">
+<h2>Education</h2>
+<div class="card">
+Master's in Computer Application — Thakur Institute (CGPA: 6.66)
+</div>
+<div class="card">
+Bachelor's in Information Technology — Thakur College (CGPA: 6.72)
 </div>
 </section>
 
 <section id="testimonials" class="section fade">
 <h2>Testimonials</h2>
-<div class="testimonial">
-“Consistently demonstrates ownership and structured problem-solving approach in resolving production issues.”  
+<div class="card">
+“Consistently demonstrates ownership, structured RCA approach, and strong stakeholder communication while handling production issues.”
 </div>
 </section>
 
@@ -258,7 +263,6 @@ Improved support efficiency by 20% via SQL-driven ticket trend analysis and auto
 </section>
 
 <script>
-/* Fade Animation */
 const faders = document.querySelectorAll('.fade');
 const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
@@ -269,7 +273,6 @@ entry.target.classList.add('show');
 });
 faders.forEach(fade => observer.observe(fade));
 
-/* Dark Mode */
 function toggleDarkMode(){
 document.body.classList.toggle("dark-mode");
 }
