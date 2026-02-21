@@ -7,7 +7,6 @@
 
 <meta name="description" content="Krishna Mishra — Software Engineer II | Application Support | SQL | Incident Management | Portfolio & Resume">
 
-
 <style>
 :root {
     --primary: #5a3e2b;
@@ -31,8 +30,8 @@ body.dark-mode {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -42,7 +41,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav {
     position: fixed;
     width: 100%;
@@ -109,11 +108,6 @@ nav a:hover {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.cta-btn:hover {
-    background: #d4af37;
 }
 
 /* SECTION */
@@ -138,26 +132,6 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-/* SKILLS */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-.progress {
-    background: #e6ded6;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 8px;
-    background: var(--primary);
-    width: 0;
-    transition: width 1.5s ease;
-}
-
 /* TIMELINE */
 .timeline {
     position: relative;
@@ -176,3 +150,86 @@ nav a:hover {
 .timeline-item {
     margin-bottom: 40px;
     padding-left: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(43,30,22,0.08);
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--gold);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.2rem;}
+.toggle-btn{right:10px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Project</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</div>
+</nav>
+
+<section class="hero">
+<h1>Krishna Mishra</h1>
+<h2>Software Engineer II | Application Support / Application Analyst</h2>
+<p>
+Application Support professional with 2.5+ years of experience across L1/L2 technical support,
+system analysis, stakeholder coordination, and production incident management.
+Promoted internally for consistent performance and operational ownership.
+</p>
+<a href="#contact" class="cta-btn">Hire Me</a>
+</section>
+
+<section id="about" class="section">
+<h2>About</h2>
+<div class="card">
+Managing 20–30+ production incidents weekly. Strong in SQL validation, RCA reducing repeat incidents by 25%, UAT support, SLA monitoring, and structured documentation improving onboarding efficiency by 30%.
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2>Skil
