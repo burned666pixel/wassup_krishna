@@ -9,166 +9,187 @@
 
 <style>
 :root {
-    --primary:#5a3e2b;
-    --dark:#2b1e16;
-    --light:#f5f1eb;
-    --card:#ffffff;
-    --gray:#6b5b4d;
-    --gold:#b08d57;
+    --primary: #5a3e2b;
+    --dark: #2b1e16;
+    --light: #f5f1eb;
+    --card: #ffffff;
+    --gray: #6b5b4d;
+    --gold: #b08d57;
 }
 
-body.dark-mode{
-    --primary:#b08d57;
-    --dark:#f5f1eb;
-    --light:#1a120c;
-    --card:#2b1e16;
-    --gray:#cbb9a6;
+/* Dark Mode */
+body.dark-mode {
+    --primary: #b08d57;
+    --dark: #f5f1eb;
+    --light: #1a120c;
+    --card: #2b1e16;
+    --gray: #cbb9a6;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
-body{
-    background:var(--light);
-    color:var(--dark);
-    line-height:1.7;
-    transition:0.3s;
+body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.7;
+    transition: 0.3s ease;
 }
 
 /* NAV */
-nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(245,241,235,0.95);
-    backdrop-filter:blur(8px);
-    display:flex;
-    justify-content:center;
-    padding:15px 0;
-    z-index:1000;
-    box-shadow:0 4px 20px rgba(43,30,22,0.05);
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(245,241,235,0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(43,30,22,0.05);
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-nav a{
-    text-decoration:none;
-    color:var(--dark);
-    font-weight:500;
-    font-size:14px;
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-nav a:hover{
-    color:var(--gold);
+nav a:hover {
+    color: var(--gold);
 }
 
-.toggle-btn{
-    position:absolute;
-    right:25px;
-    cursor:pointer;
-    background:var(--primary);
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:13px;
+.toggle-btn {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
 /* HERO */
-.hero{
-    min-height:100vh;
-    background:linear-gradient(135deg,#2b1e16,#5a3e2b);
-    color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2b1e16, #5a3e2b);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.hero h1{font-size:3rem;}
-.hero h2{margin:15px 0;color:#e8dccb;font-weight:400;}
+.hero h1 { font-size: 3rem; }
+.hero h2 { margin: 15px 0; color: #e8dccb; }
 
-.cta-btn{
-    margin-top:25px;
-    background:var(--gold);
-    color:#2b1e16;
-    padding:12px 28px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+.cta-btn {
+    margin-top: 25px;
+    background: var(--gold);
+    color: #2b1e16;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
 /* SECTION */
-.section{
-    padding:100px 20px;
-    max-width:1100px;
-    margin:auto;
+.section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.section h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:var(--primary);
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
 }
 
-.card{
-    background:var(--card);
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 10px 25px rgba(43,30,22,0.08);
-    margin-bottom:25px;
+/* CARDS */
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(43,30,22,0.08);
+    margin-bottom: 25px;
 }
 
-.card h3{
-    margin-bottom:10px;
-    color:var(--primary);
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 30px;
 }
 
-ul{
-    padding-left:20px;
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    width: 3px;
+    height: 100%;
+    background: var(--primary);
 }
 
-.skill-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.timeline-item {
+    margin-bottom: 40px;
+    padding-left: 40px;
+    position: relative;
 }
 
-.skill-tag{
-    background:var(--light);
-    padding:10px 15px;
-    border-radius:20px;
-    font-size:14px;
-    display:inline-block;
-    margin:5px 5px 0 0;
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: var(--gold);
+    border-radius: 50%;
 }
 
-.contact{
-    text-align:center;
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.contact a{
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:500;
+.skill-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(43,30,22,0.08);
 }
 
-footer{
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-    color:var(--gray);
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--gold);
 }
 
 @media(max-width:768px){
@@ -183,8 +204,8 @@ footer{
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Project</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -194,62 +215,98 @@ footer{
 
 <section class="hero">
 <h1>Krishna Mishra</h1>
-<h2>Software Engineer II | Application Support | Incident & SQL Analysis</h2>
+<h2>Software Engineer II | Application Support / Application Analyst</h2>
 <p>
-Application Support / Application Analyst with 2.5+ years of experience in L1/L2 support, SQL validation,
-RCA, UAT support, SLA monitoring, and stakeholder coordination ensuring application stability.
+Application Support professional with 2.5+ years of experience across L1/L2 technical support,
+system analysis, stakeholder coordination, and production incident management.
+Promoted internally for consistent performance and operational ownership.
 </p>
-<a href="#contact" class="cta-btn">Contact Me</a>
+<a href="#contact" class="cta-btn">Hire Me</a>
 </section>
 
 <section id="about" class="section">
-<h2>Professional Summary</h2>
+<h2>About</h2>
 <div class="card">
-Promoted internally for consistent performance and ownership in managing production incidents.
-Strong expertise in SQL-based issue validation, Root Cause Analysis (RCA), impact analysis,
-UAT validation, and operational documentation. Experienced in collaborating with Product,
-Engineering, QA, and Support teams to improve SLA compliance and reduce repeat incidents.
+Managing 20–30+ production incidents weekly. Strong in SQL validation, RCA reducing repeat incidents by 25%, UAT support, SLA monitoring, and structured documentation improving onboarding efficiency by 30%.
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2>Skills</h2>
+<div class="skills-container">
+<div class="skill-card">Incident Management & RCA</div>
+<div class="skill-card">MySQL / MongoDB / HeidiSQL</div>
+<div class="skill-card">Postman (API Validation)</div>
+<div class="skill-card">Requirement Gathering & Risk Analysis</div>
+<div class="skill-card">Apache Superset</div>
+<div class="skill-card">Stakeholder Management</div>
+<div class="skill-card">MS Excel</div>
 </div>
 </section>
 
 <section id="experience" class="section">
 <h2>Experience</h2>
+<div class="timeline">
 
-<div class="card">
+<div class="timeline-item">
 <h3>Software Engineer II — Homeville Consulting Pvt Ltd (2025–Present)</h3>
-<ul>
-<li>Primary application support and analysis POC for production issues.</li>
-<li>Handle 20–30+ incidents weekly; convert findings into structured Jira defects.</li>
-<li>SQL-based validation reducing false positives by 15–20%.</li>
-<li>Conduct RCA contributing to ~25% reduction in repeat incidents.</li>
-<li>Support UAT cycles, validation scenarios & release readiness checks.</li>
-<li>Maintain SOPs & runbooks reducing onboarding time by ~30%.</li>
-<li>Monitor SLA, MTTR & ticket aging dashboards.</li>
-</ul>
+<p>
+• Analyze 20–30+ weekly incidents<br>
+• SQL validation reducing false positives by 15–20%<br>
+• RCA reducing repeat incidents by 25%<br>
+• UAT testing & release validation<br>
+• SLA & MTTR monitoring
+</p>
 </div>
 
-<div class="card">
+<div class="timeline-item">
 <h3>Technical Support Engineer — Homeville Consulting Pvt Ltd (2023–2025)</h3>
-<ul>
-<li>Provided L1/L2 application support ensuring SLA compliance.</li>
-<li>Performed trend analysis converting patterns into enhancements.</li>
-<li>Authored RCA documentation with QA & Engineering teams.</li>
-<li>Built Known-Error Database reducing repeat incidents.</li>
-<li>Introduced improved escalation workflow enhancing CSAT.</li>
-</ul>
+<p>
+• L1/L2 support ensuring SLA compliance<br>
+• Built Known-Error Database<br>
+• Improved escalation workflow
+</p>
+</div>
+
 </div>
 </section>
 
-<section id="skills" class="section">
-<h2>Technical Skills</h2>
+<section id="projects" class="section">
+<h2>Project</h2>
 <div class="card">
-<span class="skill-tag">Incident Management</span>
-<span class="skill-tag">Root Cause Analysis</span>
-<span class="skill-tag">Requirement Gathering</span>
-<span class="skill-tag">Impact/Risk Analysis</span>
-<span class="skill-tag">Stakeholder Management</span>
-<span class="skill-tag">MySQL</span>
-<span class="skill-tag">MongoDB</span>
-<span class="skill-tag">Postman (API Testing)</span>
-<span class="skill-tag">HeidiSQL</span>
-<span class="skill-tag">Apac
+<strong>Integrated Support Optimization</strong><br><br>
+• SQL ticket trend analysis<br>
+• Automated repetitive support tasks improving efficiency by 20%<br>
+• Client follow-ups improving resolution quality
+</div>
+</section>
+
+<section id="education" class="section">
+<h2>Education</h2>
+<div class="card">
+Master's in Computer Application — Thakur Institute (CGPA: 6.66)
+</div>
+<div class="card">
+Bachelor's in Information Technology — Thakur College (CGPA: 6.72)
+</div>
+</section>
+
+<section id="contact" class="section contact">
+<h2>Contact</h2>
+<p>📞 9967635196</p>
+<p>Email: <a href="mailto:mishrakrishna296@gmail.com">mishrakrishna296@gmail.com</a></p>
+<p>
+<a href="https://www.linkedin.com/in/isitkrishnamishra" target="_blank">LinkedIn</a> |
+<a href="https://github.com/burned666pixel" target="_blank">GitHub</a> |
+<a href="resume.pdf" target="_blank">Download Resume (PDF)</a>
+</p>
+</section>
+
+<script>
+function toggleDarkMode(){
+document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
